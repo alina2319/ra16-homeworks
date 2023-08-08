@@ -1,0 +1,21 @@
+/* common.css */
+
+body {
+    margin: 0;
+}
+
+.main__body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.main__calendar {
+    margin: 0 auto;
+}
+
+._container {
+    max-width: 1000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
