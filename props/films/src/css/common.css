@@ -1,0 +1,82 @@
+/* common.css */
+
+body,
+html {
+    margin: 0;
+    font-family: Muli, sans-serif;
+    height: 100%;
+    padding: 0;
+    overflow-x:hidden;
+}
+
+.container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #999;
+}
+
+.window {
+    background: #fff;
+    width: 470px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 400px;
+    position: relative;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 850px) {
+    body {
+        background:#fff;
+        overflow:auto;
+    }
+
+    .container {
+        background:#fff;
+        overflow:auto;
+    }
+
+    .background-element {
+        display:none;
+    }
+
+    .window {
+        overflow:auto;
+        width:50%;
+        height:auto;
+        position:absolute;
+        box-shadow:none;
+        right: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        overflow:auto;
+        height:auto;
+    }
+
+    .container {
+        overflow:auto;
+    }
+
+    .window {
+        width:100%;
+        position:relative;
+        height:100%;
+        overflow:auto;
+    }
+}

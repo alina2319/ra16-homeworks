@@ -1,42 +1,70 @@
-Рейтинг фильмов
-===
+### [Gh-pages](https://mksinc.github.io/RA-hw.-1-Components.-1-Store-func/)
 
-Необходимо реализовать компонент, отображающий рейтинг фильма в виде звёзд:
-![Список фильмов](./assets/preview.png)
+# 1. Домашнее задание к лекции «Компоненты»
 
+## 1.1 Страница интернет-магазина (функциональный компонент)
 
-## Описание компонента
+Необходимо создать React-компонент `ShopItemFunc` (функциональный компонент), с помощью которого мы могли бы реализовывать представление информации о товарах из нашего каталога на сайте в таком виде (компонент обведён пунктирной линией):
+![Внешний вид страницы после реализации компонента](./res/preview.png)
 
-Для отображения рейтинга создайте компонент `Stars`, который принимает следующие атрибуты:
-- `count` — рейтинг фильма, _число_, по умолчанию `0`.
-
-Если рейтинг меньше `1` или больше `5`, или вообще не число, то компонент не должен иметь какого-либо представления в DOM.
-
-Звёзды рейтинга должны быть представлены тегом `<ul>` с классом `card-body-stars`. Для отображения символа звезды внутри тега `<li>` используйте компонент `Star`.
-
-## Пример использования
-
+### Пример использования
 ```jsx
-// Внутри App
+const item = {
+  brand: 'Tiger of Sweden',
+  title: 'Leonard coat',
+  description: 'Minimalistic coat in cotton-blend',
+  descriptionFull: 'Men\'s minimalistic overcoat in cotton-blend. Features a stand-up collar, concealed front closure and single back vent. Slim fit with clean, straight shape. Above-knee length.',
+  price: 399,
+  currency: '£'
+}
+
+// Внутри компонента App
 return (
-  <Stars count={1} />,
-);
+  <div className="container">
+    <div className="background-element">
+    </div>
+    <div className="highlight-window">
+      <div className='highlight-overlay'></div>
+    </div>
+    <div className="window">
+      <ShopItemFunc item={item} />
+    </div>
+  </div>
+)
 ```
 
-Компонент должен дать следующий код:
+### Описание компонента
+
+Компонент должен иметь один props `item`, в котором он ожидает объект с информацией о товаре со следующими свойствами:
+- `brand` — название производителя товара,
+- `title` — название товара,
+- `description` — краткое описание товара,
+- `descriptionFull` — подробное описание товара,
+- `price` — цена товара,
+- `currency` — валюта товара.
+
+Компонент должен создавать DOM элемент следующей структуры:
 ```html
-<ul class="card-body-stars u-clearfix">
-  <li>
-    <svg fill="#D3BCA2" height="28" viewBox="0 0 18 18" width="28" xmlns="http://www.w3.org/2000/svg">
-      <path d="M9 11.3l3.71 2.7-1.42-4.36L15 7h-4.55L9 2.5 7.55 7H3l3.71 2.64L5.29 14z"/>
-      <path d="M0 0h18v18H0z" fill="none"/>
-    </svg>
-  </li>
-</ul>
+<div class="main-content">
+  <h2>Tiger of Sweden</h2>
+  <h1>Leonard coat</h1>
+  <h3>Minimalistic coat in cotton-blend</h3>
+  <div class="description">
+    Men's minimalistic overcoat in cotton-blend. Features a stand-up collar, concealed front closure and single back vent. Slim fit with clean, straight shape. Above-knee length.
+  </div>
+  <div class="highlight-window mobile"><div class="highlight-overlay"></div></div>
+  <div class="divider"></div>
+  <div class="purchase-info">
+    <div class="price">£399.00</div>
+    <button>Добавить в корзину</button>
+  </div>
+</div>
 ```
 
-## Реализация
+Соответственно название производителя необходимо подставить в `h2`, название товара в `h1`, краткое описание в `<h3>`, подробное описание в `div.description`, цену и валюту в `div.price`. При этом символ валюты должен следовать перед ценой, а цена должна быть представлена с двумя числами после запятой.
 
-Необходимо реализовать компонет `Stars`. Не забудьте, что отдельная звезда должна быть представлена компонентом `Star`.
+### Реализация
 
-Важно: вам нужно реализовать только отображение звёздочек, карточку фильма не нужно.
+Реализуйте полноценный проект с помощью create-react-app, не забудьте задействовать prop-types (для item можете использовать либо тип `object`, либо вынести item в класс и использовать `instanceOf`.
+
+Используйте расположенный в данном каталоге css для стилизации.
