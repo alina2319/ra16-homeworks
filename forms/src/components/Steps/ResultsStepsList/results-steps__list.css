@@ -1,0 +1,50 @@
+/* results-steps__list.css */
+
+.results-steps__header {
+	margin-bottom: 10px;
+}
+
+.results-steps__list {
+	padding: 10px 5px;
+
+	border: 1px solid black;
+	border-radius: 8px;
+}
+
+.results-steps__list li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.results-steps__actions {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.results-steps__btn {
+	flex: 0 0 30px;
+	height: 30px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 50%;
+}
+
+.results-steps__btn::after {
+	font-size: 20px;
+	line-height: 100%;
+	transition: color 0.3s;
+}
+
+.results-steps__btn:hover::after {
+	color: gray;
+}
+
+.results-steps__btn-edit::after {
+	content: '\270E';
+}
+
+.results-steps__btn-remove::after {
+	content: '\2718';
+}

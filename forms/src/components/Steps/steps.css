@@ -1,0 +1,37 @@
+/* steps.css */
+
+.steps {
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.steps > *:first-child {
+	margin-bottom: 20px;
+}
+
+.steps-columns {
+	display: flex;
+	align-items: center;
+	margin: 0 -10px;
+
+	text-align: center;
+}
+
+.steps-columns > div {
+	padding: 0 10px;
+}
+
+.steps-columns_bottom {
+	align-items: flex-end;
+}
+
+.steps-columns__column-1,
+.steps-columns__column-2 {
+	flex: 1 1 40%;
+}
+
+.steps-columns__column-3 {
+	flex: 1 1 20%;
+	min-width: 90px;
+}
