@@ -1,0 +1,80 @@
+/* app.css */
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* header ------------------------------------------------------------------------------ */
+
+.header {
+	margin-bottom: 20px;
+}
+
+.header__body {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.header__title {
+	margin-bottom: 20px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.menu-header {
+	display: flex;
+	justify-content: center;
+}
+
+.menu-header__list li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.menu-header__link {
+	position: relative;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.menu-header__link_active::before,
+.menu-header__link_active::after {
+	content: '';
+	position: absolute;
+	top: 43%;
+	left: -25px;
+	height: 3px;
+	width: 15px;
+	background-color: #bfbfbf;
+	transform-origin: bottom right;
+	transform: rotate(30deg);
+}
+
+.menu-header__link_active::after {
+	transform-origin: top right;
+	transform: rotate(-30deg);
+}
+
+.menu-header__text {
+	transition: color 0.2s;
+}
+
+.menu-header__text:hover {
+	color: #6A5ACD;
+}
+
+
+
+/* main -------------------------------------------------------------------------------- */
+
+.main {
+	padding-bottom: 50px;
+}
+
+.task {
+	min-height: 100vh;
+}
+
+.task__body {
+	position: relative;
+}
