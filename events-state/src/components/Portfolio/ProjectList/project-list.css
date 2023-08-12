@@ -1,0 +1,19 @@
+/* project-list.css */
+
+.project-list-portfolio {
+	display: flex;
+	margin: -8px;
+}
+
+.project-list-portfolio__column {
+	flex: 0 0 33.33%;
+}
+
+.project-list-portfolio__project {
+	padding: 8px;
+}
+
+.project-list-portfolio__project img {
+	width: 100%;
+	max-width: 100%;
+}

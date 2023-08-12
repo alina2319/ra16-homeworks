@@ -1,0 +1,81 @@
+/* store.css */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@font-face {
+	font-family: 'PT Sans Narrow';
+	src: url('./fonts/PTSans-Narrow.woff2') format('woff2'),
+		url('./fonts/PTSans-Narrow.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+.store__header {
+	padding: 20px 0;
+}
+
+.store__menu {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.store__products_cards-view {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: -20px;
+}
+
+.product-store {
+	font-family: 'PT Sans Narrow', sans-serif;
+
+	background-color: #f5f5f5;
+}
+
+.product-store__title {
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.product-store__color {
+	font-size: 18px;
+	text-transform: lowercase;
+
+	color: #595856;
+}
+
+.product-store__price {
+	font-size: 20px;
+
+	color: #d33f34;
+}
+
+.product-store__btn {
+	display: block;
+	max-width: 130px;
+	padding: 11px 10px;
+
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	border: 1px solid #d33f34;
+	border-radius: 20px;
+
+	color: #d33f34;
+}
+
+@media(max-width: 1160px) {
+	.store__products_cards-view {
+		justify-content: center;
+	}
+}
+
+@media(max-width: 420px) {
+	.store__products_cards-view {
+		display: block;
+		margin: 0;
+	}
+}
