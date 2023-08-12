@@ -1,21 +1,7 @@
-useJsonFetch
-===
+### [Heroku server](https://ra-8-2-usejsonfetch.herokuapp.com/)
 
-Реализуйте кастомный хук `useJsonFetch`, который позволяет с помощью `fetch` осуществлять HTTP-запросы.
+# 8. Домашнее задание к лекции «Hooks, Context API»
 
-Использование этого хука должно выглядеть следующим образом:
-```javascript
-const [data, loading, error] = useJsonFetch(url, opts);
-```
+## 8.2 useJsonFetch (Backend)
 
-где:
-* `data` — данные, полученные после `response.json()`, не Promise, а именно данные;
-* `error` — ошибка: ошибка сети, ошибка ответа, если код не 20x, ошибка парсинга, если пришёл не JSON;
-* `loading` — boolean флаг, сигнализирующий о том, что загрузка идёт.
-
-Покажите использование этого хука на примере трёх компонентов, каждый из которых делает запросы на следующие адреса:
-* GET http://localhost:7070/data — успешное получение данных;
-* GET http://localhost:7070/error — получение 500 ошибки;
-* GET http://localhost:7070/loading — индикатор загрузки.
-
-Backend возьмите из каталога `backend`.
+### Описание задания во [Frontend](https://github.com/MKSInc/RA-hw.-8-Hooks-context.-1-useEffect.-2-useJsonFetch.-3-Authentication#8.2) части.
