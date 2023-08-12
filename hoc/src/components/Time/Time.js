@@ -1,0 +1,47 @@
+import React, {useState, useEffect } from 'react';
+import './time.css';
+import getTimeAgo from './utility';
+import data from './data';
+
+function DateTime(props) {
+	return (
+		<p className="item-time__date">{props.date}</p>
+	)
+}
+
+function withTimeAgo(Component) {
+	return function Wrapper(props) {
+		return <Component {...props} date={getTimeAgo(props.date)}/>
+	}
+}
+
+const TimeAgo = withTimeAgo(DateTime);
+
+function Video(props) {
+	return (
+		<div className={'time__item item-time'}>
+			<div className={'item-time__body'}>
+				<div className={'item-time__video'}>
+					<iframe src={props.url} title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
+				</div>
+				<TimeAgo date={props.date} />
+			</div>
+		</div>
+	)
+}
+
+function VideoList(props) {
+	return props.list.map((item, index) => <Video key={index} url={item.url} date={item.date} />);
+}
+
+export default function Time() {
+	const [list, setList] = useState([]);
+
+	useEffect(() => setList(data), []);
+
+	return (
+		<div className={'time'}>
+			<VideoList list={list} />
+		</div>
+	);
+}

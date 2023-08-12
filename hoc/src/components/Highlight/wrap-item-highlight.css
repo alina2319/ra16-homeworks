@@ -1,0 +1,40 @@
+/* wrap-item-highlight.css */
+
+.wrap-item-highlight {
+	padding: 10px; /* Отступы между items */
+}
+
+.wrap-item-highlight__body {
+	position: relative;
+	padding: 10px;
+}
+
+.wrap-item-highlight_new .wrap-item-highlight__body {
+	background-color: rgba(41, 198, 31, 0.47);
+}
+
+.wrap-item-highlight_popular .wrap-item-highlight__body {
+	background-color: rgba(231, 0, 25, 0.64);
+}
+
+.wrap-item-highlight__label {
+	position: absolute;
+	z-index: 2;
+	top: 3px;
+	left: 3px;
+	padding: 2px;
+
+	border: 1px solid;
+	border-radius: 3px;
+	color: #fff;
+}
+
+.wrap-item-highlight_new .wrap-item-highlight__label {
+	background-color: rgba(15, 145, 37, 0.72);
+	border-color: rgba(15, 145, 37, 1);
+}
+
+.wrap-item-highlight_popular .wrap-item-highlight__label {
+	background-color: rgba(176, 0, 24, 0.73);
+	border-color: rgba(176, 0, 24, 0, 1);
+}

@@ -1,0 +1,75 @@
+/* highlight.css */
+
+
+.highlight {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: -10px;
+}
+
+.highlight__item,
+.highlight__wrap-item {
+	flex: 0 0 50%;
+	max-width: 460px;
+	padding: 10px;
+}
+
+
+/* Убираем стили у 'highlight__item', так как после помещения в обертку они теряют смысл. */
+.highlight__wrap-item .highlight__item {
+	padding: 0; 
+	flex: none;
+	max-width: none;
+}
+
+.item-highlight__body {
+	height: 100%; /* Заполняем флекс-элемент по высоте, чтобы итемы с оберткой и без выглядели одинаковой высоты. */
+	padding: 10px;
+	background: #000000;
+}
+
+.item-highlight__wrap {
+	position: relative;
+	z-index: 1;
+	padding-bottom: 56.25%;
+	margin-bottom: 10px;
+}
+
+.item-highlight__content {
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+
+.article-highlight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.article-highlight__link {
+	color: #ffffff;
+}
+
+.article-highlight__link:hover {
+	text-decoration: underline;
+}
+
+.item-highlight__views {
+	font-size: 80%;
+	text-align: right;
+	color: #cccccc;
+}
+
+@media(max-width: 767px) {
+	.highlight__item,
+	.highlight__wrap-item {
+		flex: 0 0 100%;
+		max-width: 100%;
+		padding: 10px;
+	}
+}
