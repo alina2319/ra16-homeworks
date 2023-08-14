@@ -1,10 +1,9 @@
-Redux
-===
+# Домашнее задание к занятию "React Redux"
 
-Необходимо выполнить и предоставить на проверку следующие задачи:
+![CI](https://github.com/DnD-developer/ra16-homeworks-redux/actions/workflows/deploy.yml/badge.svg?branch=master)
 
-1. [Редактирование](editing).
-1. [Фильтрация](filter).
-1. [Маркет](market) — необязательное задание.
+![CI](https://github.com/DnD-developer/ra16-homeworks-redux/actions/workflows/build.yml/badge.svg?branch=dev)
 
-Первые два задания лучше сдавать в одном проекте, то есть в одном create-react-app, так как второе задание продолжает идеи первого. 
+[Условия домашнего задания](https://github.com/netology-code/ra16-homeworks/tree/master/redux)
+
+[GitHub Pages](https://dnd-developer.github.io/ra16-homeworks-redux/)
